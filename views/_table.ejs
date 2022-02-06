@@ -1,0 +1,170 @@
+<div class="px-3 py-8 lg:px-8 lg:py-12 md:px-2 md:py-12 sm:px-6 sm:py-4 dark:bg-slate-600 dark:text-slate-200">
+  
+  <!-- include main heading -->
+  <%- include('_main_heading') %>
+  <!-- /include main heading -->
+
+  <div class="flex items-center justify-center md:justify-start">
+    <a href="/add_user">
+      <button
+        class="inline-flex mb-5 ml-1 items-center rounded-lg text-base py-1 px-3 focus:outline-none bg-indigo-500 shadow-md shadow-bg-indigo-600/40 text-white border-2 border-indigo-900 hover:bg-indigo-600 md:mt-0 sm:text-base md:text-lg lg:text-xl dark:bg-blue-500 dark:shadow-md dark:shadow-bg-blue-500/40 dark:hover:bg-blue-600 dark:border-blue-900">
+        ADD USER
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-3 animate-bounce" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+        </svg>
+      </button>
+    </a>
+  </div>
+
+
+  <!------------------------------- yaha se table chalu ho rahi hai -------------------------->
+  <form action="/" method="POST">
+    <table class="table1 editor_listing_table min-w-full border-collapse block md:table">
+      <thead class="block md:table-header-group">
+        <tr
+          class="text-sm sm:text-base md:text-base lg:text-xl md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto md:relative">
+          <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+            Id
+          </th>
+          <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+            Name
+          </th>
+          <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+            Job-Profile
+          </th>
+          <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+            Email
+          </th>
+          <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+            Mobile
+          </th>
+          <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody class=" block md:table-row-group">
+        <tr
+          class=" bg-gray-300 border border-dashed border-slate-800 dark:border-slate-300 md:border-none lg:border-none mb-5 text-sm sm:text-base md:text-base lg:text-lg block md:table-row dark:bg-gray-500 dark:text-gray-300">
+          <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+            <span class="inline-block w-1/3 md:hidden font-bold dark:text-gray-900">Id</span>1
+          </td>
+          <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+            <span class="inline-block w-1/3 md:hidden font-bold dark:text-gray-900">Name</span>Jamal Rios
+          </td>
+          <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+            <span class="inline-block w-1/3 md:hidden font-bold dark:text-gray-900">Job-Profile</span>Manager
+          </td>
+          <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+            <span class="inline-block w-1/3 md:hidden font-bold dark:text-gray-900">Email</span>jrios@icloud.com
+          </td>
+          <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+            <span class="inline-block w-1/3 md:hidden font-bold dark:text-gray-900">Mobile</span>582-3X2-6233
+          </td>
+          <td class="p-2 flex justify-items-start md:border md:border-grey-500 text-left md:table-cell,flex">
+            <span class="inline-block w-1/3 md:hidden font-bold dark:text-gray-900">Actions</span>
+            <div class="inline-block">
+              <div class="inline-block">
+                <a href="#" class="mr-5 flex items-stretch" type="button" onclick="showAlertForView()">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 sm:h-7 sm:w-7 md:h-7 md:w-7 lg:h-8 lg:w-8 text-emerald-600 dark:text-black"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                </a>
+              </div>
+              <div class="inline-block">
+                <a href="#" class="mr-5 flex items-stretch" type="button" onclick="showAlertForUpdate()">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 sm:h-7 sm:w-7 md:h-7 md:w-7 lg:h-8 lg:w-8 text-blue-400 dark:text-black" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                </a>
+              </div>
+              <div class="inline-block">
+                <a href="#" class="mr-5 flex items-stretch" type="button" onclick="showAlertForDelete()">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 sm:h-7 sm:w-7 md:h-7 md:w-7 lg:h-8 lg:w-8 text-red-400 dark:text-black" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <% for(var i=0; i < users.length; i++) { %>
+          <tr
+            class="bg-gray-300 border border-dashed border-slate-800 dark:border-slate-300 md:border-none lg:border-none mb-5 text-sm sm:text-base md:text-base lg:text-lg  block md:table-row dark:bg-gray-500 dark:text-gray-300">
+            <td class="td p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              <span class="inline-block w-1/3 md:hidden font-bold dark:text-gray-900">Id</span>
+              <%= i + 2 %>
+            </td>
+            <td class=" p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              <span class="inline-block w-1/3 md:hidden font-bold dark:text-gray-900">Name</span>
+              <%= users[i].name %>
+            </td>
+            <td class=" p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              <span class="inline-block w-1/3 md:hidden font-bold dark:text-gray-900">Job-Profile</span>
+              <%= users[i].job_profile %>
+            </td>
+            <td class=" p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              <span class="inline-block w-1/3 md:hidden font-bold dark:text-gray-900">Email</span>
+              <%= users[i].email %>
+            </td>
+            <td class=" p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              <span class="inline-block w-1/3 md:hidden font-bold dark:text-gray-900">Mobile</span>
+              <%= users[i].mobile %>
+            </td>
+            <td class=" p-2 flex justify-items-start md:border md:border-grey-500 text-left md:table-cell,flex">
+              <span class="inline-block w-1/3 md:hidden font-bold dark:text-gray-900">Actions</span>
+              <div class="inline-block">
+                <div class="inline-block">
+                  <a href="/view_user?id=<%= users[i]._id%>" class="mr-5 flex items-stretch" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 sm:h-7 sm:w-7 md:h-7 md:w-7 lg:h-8 lg:w-8 text-emerald-600 dark:text-black"
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="inline-block">
+                  <a href="/update_user?id=<%= users[i]._id%>" type="button" class="mr-5 flex items-stretch">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 sm:h-7 sm:w-7 md:h-7 md:w-7 lg:h-8 lg:w-8 text-blue-400 dark:text-black"
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="inline-block">
+                  <a class="delete mr-5 flex items-stretch cursor-pointer" type="button" data-id=<%=users[i]._id %>
+                    >
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 sm:h-7 sm:w-7 md:h-7 md:w-7 lg:h-8 lg:w-8 text-red-400 dark:text-black" fill="none"
+                      viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+  </form>
+</div>

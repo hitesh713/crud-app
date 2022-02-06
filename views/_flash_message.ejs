@@ -1,0 +1,16 @@
+<div class="bg-white dark:bg-slate-600 mx-auto">
+  <% if (locals.messages) { %>
+
+    <div class="messages flex text-center justify-center items-center  text-gray-900  bg-white dark:bg-slate-600">
+      <ul class="messages w-full text-center mb-5  mx-auto max-w-lg">
+        <% Object.keys(messages).forEach((key)=> { %> <% messages[key].forEach((message)=> { %>
+            <li class="<%= key %> p-4 text-base font-normal border-2 border-slate-700 rounded-xl mt-1 py-2">
+              <%= message %>
+            </li>
+            <% }) %>
+              <% }) %>
+      </ul>
+    </div>
+
+    <% } %>
+</div>

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Baloo+Da+2:wght@500;700&family=IBM+Plex+Mono:wght@400;700&family=Poppins:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bg-primary {
+    @apply bg-gradient-to-br from-purple-100 to-pink-100 via-cyan-100;
+  }
+  .table {
+    @apply lg:border-[2px] lg:border-gray-600 md:border-[2px] md:border-gray-600 dark:md:border-[1px] dark:md:border-gray-100 dark:lg:border-[1px] dark:lg:border-gray-100;
+  }
+  #checkbox:checked ~ label div.toggle-ball {
+    @apply translate-x-[24px];
+  }
+
+  .editor_listing_table tbody tr:nth-child(odd) {
+    @apply bg-gray-300 dark:bg-gray-500 dark:text-gray-300;
+  }
+
+  .editor_listing_table tbody tr:nth-child(even) {
+    @apply bg-white dark:bg-gray-400 dark:text-slate-800;
+  }
+  .messages .error{
+    @apply bg-[#f87171];
+  }
+  .messages .success {
+    @apply bg-[#6ee7b7];
+  }
+  .messages .warning {
+    @apply bg-[#fcd34d];
+  }
+  .messages .info {
+    @apply bg-[#93c5fd];
+  }
+}

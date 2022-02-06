@@ -1,0 +1,32 @@
+<div
+  class="flex items-center justify-center w-screen h-screen  bg-fixed dark:bg-gradient-to-r dark:from-slate-600 dark:to-gray-400"
+  style="background-image: url(../assets/img/error.jpg)"
+>
+  <div
+    class="w-full py-20 bg-white dark:bg-slate-800  rounded-md shadow-2xl sm:w-full md:w-10/12 lg:w-10/12"
+  >
+    <div class="container flex flex-col items-center">
+      <h1
+        class="font-bold text-center text-blue-600 dark:text-gray-400 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+      >
+        <%= error.status %> | <%= error.message %>
+      </h1>
+
+      <h6
+        class="mt-10 mb-2 text-2xl font-bold text-center text-gray-800 dark:text-gray-400 md:text-3xl"
+      >
+        <span class="text-red-500">Oops!</span> Page not found
+      </h6>
+
+      <p class="mb-8 text-center text-gray-500 md:text-lg">
+        The page you’re looking for doesn’t exist.
+      </p>
+
+      <a
+        href="/"
+        class="px-6 py-2 text-sm font-semibold text-blue-800 bg-blue-100"
+        >Go home</a
+      >
+    </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<section class="text-gray-600 body-font dark:bg-slate-600 dark:text-slate-200">
+    <div class="container px-5 py-24 mx-auto items-center md:w-9/12">
+      <div class="flex justify-start mb-10">
+        <a href="/">
+          <button
+            class="inline-flex ml-1 items-center tracking-wide text-base border-2 border-indigo-900 dark:border-blue-900 py-1 px-3 focus:outline-none bg-indigo-500 shadow-md shadow-bg-indigo-600/40 text-white hover:bg-indigo-600 rounded-lg md:mt-0 sm:text-base md:text-lg lg:text-xl dark:bg-blue-500 dark:shadow-md dark:shadow-bg-blue-500/40 dark:hover:bg-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 animate-bounce" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z" />
+            </svg>
+            BACK
+          </button>
+        </a>
+      </div>
+  
+        <!-- include flash-message -->
+        <%- include('_flash_message') %>
+        <!-- /include flash-message -->
+  
+      <form method="POST" id="update_user">
+        <div class="lg:w-full bg-gray-200 rounded-lg p-8 flex flex-col md:w-full mx-auto mt-10 md:mt-0 dark:bg-gray-700">
+          <h1 class="text-gray-900 text-2xl font-mono font-medium title-font mb-5 dark:text-slate-300">
+            UPDATE USER
+          </h1>
+  
+          <div class="relative mb-4">
+            <label for="name" class="leading-7 text-sm text-gray-600 font-medium dark:text-blue-500">NAME</label>
+            <input type="hidden" name="id" value="<%= user._id %>"/>
+            <input type="text" id="name" name="name" placeholder="Jhon Wick"  value="<%= user.name %>" required
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+          </div>
+          <div class="relative mb-4">
+            <label for="job profile" class="leading-7 text-sm text-gray-600 font-medium dark:text-blue-500">JOB
+              PROFILE</label>
+            <select
+              class="form-select w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              id="job_profile" name="job_profile" value="<%= user.job_profile %>" >
+              <option value="Web Designer" <%= user.job_profile == 'Web Designer' ? 'selected' : '' %>>Web Designer</option>
+              <option value="Nursing Assistant"<%= user.job_profile == 'Nursing Assistant' ? 'selected' : '' %>>Nursing Assistant</option>
+              <option value="Project Manager" <%= user.job_profile == 'Project Manager' ? 'selected' : '' %>>Project Manager</option>
+              <option value="Librarian"<%= user.job_profile == 'Librarian' ? 'selected' : '' %>>Librarian</option>
+              <option value="Graphic Designer" <%= user.job_profile == 'Graphic Designer' ? 'selected' : '' %>>Graphic Designer</option>
+              <option value="SEO Manager" <%= user.job_profile == 'SEO Manager' ? 'selected' : '' %>>SEO Manager</option>
+              <option value="Social Media Assistant" <%= user.job_profile == 'Social Media Assistant' ? 'selected' : '' %>>
+                Social Media Assistant
+              </option>
+              <option value="Marketing Consultant" <%= user.job_profile == 'Marketing Consultant' ? 'selected' : '' %>>Marketing Consultant</option>
+              <option value="Receptionist" <%= user.job_profile == 'Receptionist' ? 'selected' : '' %>>Receptionist</option>
+              <option value="Office Clerk" <%= user.job_profile == 'Office Clerk' ? 'selected' : '' %>>Office Clerk</option>
+              <option value="Receptionist" <%= user.job_profile == 'Receptionist' ? 'selected' : '' %>>Receptionist</option>
+              <option value="Manager" <%= user.job_profile == 'Manager' ? 'selected' : '' %>>Manager</option>
+            </select>
+          </div>
+          <div class="relative mb-4">
+            <label for="email" class="leading-7 text-sm text-gray-600 font-medium dark:text-blue-500">EMAIL</label>
+            <input type="email" required id="email" name="email" placeholder="jhonwick@gmail.com"  value="<%= user.email%>"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+          </div>
+  
+          <div class="relative mb-4">
+            <label for="mobile" class="leading-7 text-sm text-gray-600 font-medium dark:text-blue-500">MOBILE</label>
+            <input required id="mobile" name="mobile"  value="<%= user.mobile%>" placeholder="870-XXX-XXXX"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+          </div>
+  
+          <button
+            class="text-white bg-indigo-500 font-semibold shadow-md shadow-bg-indigo-500/40 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg dark:bg-blue-500 dark:shadow-md dark:shadow-bg-blue-500/40 dark:hover:bg-blue-600"
+            type="submit">
+            Update
+          </button>
+          <p class="text-xs text-gray-500 mt-3">
+            Literally you probably haven't heard of them jean shorts.
+          </p>
+        </div>
+    </div>
+  </section>
+  </form>

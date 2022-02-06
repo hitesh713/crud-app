@@ -1,0 +1,243 @@
+<div
+  class="flex font-sans w-full h-screen justify-center items-center bg-white dark:bg-[#22272e]"
+>
+  <div
+    class="w-full md:w-3/5 mx-auto p-8 rounded-md bg-white dark:bg-[#22272e]"
+  >
+    <p
+      class="flex py-5 justify-center items-center text-black dark:text-slate-300"
+    >
+      <strong>What's in this CRUD Application</strong>
+    </p>
+    <div
+      class="shadow-md rounded-md border border-dashed dark:border-solid border-slate-800 dark:border-slate-500 bg-white dark:bg-[#373e47]"
+      x-data="{selected:1}"
+    >
+      <ul class="shadow-box">
+        <li class="relative border-b border-gray-200">
+          <button
+            type="button"
+            class="w-full px-8 py-6 text-left"
+            @click="selected !== 1 ? selected = 1 : selected = null"
+          >
+            <div class="flex items-center justify-between dark:text-slate-300">
+              <span> Which technologies i have used in this project? </span>
+              <span class="ico-plus"></span>
+            </div>
+          </button>
+
+          <div
+            class="relative overflow-hidden transition-all max-h-0 duration-700"
+            x-ref="container1"
+            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+          >
+            <div
+              class="p-6 overflow-hidden border-l-2 bg-gray-100 dark:bg-[#373e47] dark:text-[#8f9ba7] border-indigo-500 dark:border-blue-500 leading-normal"
+            >
+              <div class="mt-2 mb-2">
+                <span class="flex text-xs sm:text-base md:text-base font-bold">
+                  Front End :- EJS Template Engine
+                </span>
+                <span class="flex text-xs sm:text-base md:text-base font-bold">
+                  Styling :- TailwindCSS
+                </span>
+                <span class="flex text-xs sm:text-base md:text-base font-bold">
+                  Back End :- ExpessJS,MongoDB,NodeJS
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="relative border-b border-gray-200">
+          <button
+            type="button"
+            class="w-full px-8 py-6 text-left"
+            @click="selected !== 2 ? selected = 2 : selected = null"
+          >
+            <div class="flex items-center justify-between dark:text-slate-300">
+              <span> Features in this CRUD App? </span>
+            </div>
+          </button>
+
+          <div
+            class="relative overflow-hidden transition-all max-h-0 duration-700"
+            x-ref="container2"
+            x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+          >
+            <div
+              class="p-6 overflow-hidden border-l-2 bg-gray-100 dark:bg-[#373e47] dark:text-[#8f9ba7] border-indigo-500 dark:border-blue-500 leading-normal"
+            >
+              <p class="mt-2 text-xs sm:text-base md:text-base">
+                [1] Dark mode switch theme (light to dark).
+              </p>
+              <p class="mt-2 text-xs sm:text-base md:text-base">
+                [2] excess data directly from mongoDB database.
+              </p>
+              <p class="mt-2 text-xs sm:text-base md:text-base">
+                [3] excess individual user profile.
+              </p>
+              <p class="mt-2 text-xs sm:text-base md:text-base">
+                [4] validating user input in add user form.
+              </p>
+              <p class="mt-2 text-xs sm:text-base md:text-base">
+                [5] handling HTTP Errors.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="relative border-b border-gray-200">
+          <button
+            type="button"
+            class="w-full px-8 py-6 text-left"
+            @click="selected !== 3 ? selected = 3 : selected = null"
+          >
+            <div class="flex items-center justify-between dark:text-slate-300">
+              <span> Where you get full CRUD App Code? </span>
+            </div>
+          </button>
+
+          <div
+            class="relative overflow-hidden transition-all max-h-0 duration-700"
+            x-ref="container3"
+            x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
+          >
+            <div
+              class="p-6 overflow-hidden border-l-2 bg-gray-100 dark:bg-[#373e47] dark:text-[#8f9ba7] border-indigo-500 dark:border-blue-500 leading-normal"
+            >
+              <a
+                href="https://github.com/hitesh713"
+                class="mt-2 text-xs sm:text-base md:text-base"
+              >
+                https://github.com/hitesh713
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="bg-gray-100 dark:bg-gray-900 h-screen w-full flex justify-center">
+  <div class="h-screen max-w-sm sm:max-w-lg md:max-w-4xl lg:max-w-6xl">
+    <h1 class="font-medium max-w-xl mx-auto pt-10 pb-4">Smooth Accordion</h1>
+    <div
+      class="bg-white max-w-xl mx-auto border-2 border-gray-200"
+      x-data="{selected:1}"
+    >
+      <ul class="shadow-box">
+        <li class="relative border-b-2 border-gray-200">
+          <button
+            type="button"
+            class="w-full px-8 py-6 text-left"
+            @click="selected !== 1 ? selected = 1 : selected = null"
+          >
+            <div class="flex items-center justify-between">
+              <span> Should I use reCAPTCHA v2 or v3? </span>
+              <span class="ico-plus"></span>
+            </div>
+          </button>
+
+          <div
+            class="relative overflow-hidden transition-all max-h-0 duration-700"
+            x-ref="container1"
+            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+          >
+            <div class="p-6">
+              <p>
+                reCAPTCHA v2 is not going away! We will continue to fully
+                support and improve security and usability for v2.
+              </p>
+              <p>
+                reCAPTCHA v3 is intended for power users, site owners that want
+                more data about their traffic, and for use cases in which it is
+                not appropriate to show a challenge to the user.
+              </p>
+              <p>
+                For example, a registration page might still use reCAPTCHA v2
+                for a higher-friction challenge, whereas more common actions
+                like sign-in, searches, comments, or voting might use reCAPTCHA
+                v3. To see more details, see the reCAPTCHA v3 developer guide.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="relative border-b border-gray-200">
+          <button
+            type="button"
+            class="w-full px-8 py-6 text-left"
+            @click="selected !== 2 ? selected = 2 : selected = null"
+          >
+            <div class="flex items-center justify-between">
+              <span>
+                I'd like to run automated tests with reCAPTCHA. What should I
+                do?
+              </span>
+              <span class="ico-plus"></span>
+            </div>
+          </button>
+
+          <div
+            class="relative overflow-hidden transition-all max-h-0 duration-700"
+            x-ref="container2"
+            x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+          >
+            <div class="p-6">
+              <p>
+                For reCAPTCHA v3, create a separate key for testing
+                environments. Scores may not be accurate as reCAPTCHA v3 relies
+                on seeing real traffic.
+              </p>
+              <p>
+                For reCAPTCHA v2, use the following test keys. You will always
+                get No CAPTCHA and all verification requests will pass.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="relative border-b border-gray-200">
+          <button
+            type="button"
+            class="w-full px-8 py-6 text-left"
+            @click="selected !== 3 ? selected = 3 : selected = null"
+          >
+            <div class="flex items-center justify-between">
+              <span> Can I run reCAPTCHA v2 and v3 on the same page? </span>
+              <span class="ico-plus"></span>
+            </div>
+          </button>
+
+          <div
+            class="relative overflow-hidden transition-all max-h-0 duration-700"
+            x-ref="container3"
+            x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
+          >
+            <div class="p-6">
+              <p>
+                To do this, load the v3 site key as documented, and then
+                explicitly render v2 using grecaptcha.render.
+              </p>
+              <ul>
+                <li>
+                  First, replace &lt;script
+                  src="https://www.google.com/recaptcha/api.js" async
+                  defer&gt;&lt;/script&gt; with &lt;script
+                  src="https://www.recaptcha.net/recaptcha/api.js" async
+                  defer&gt;&lt;/script&gt;
+                </li>
+                <li>
+                  After that, apply the same to everywhere else that uses
+                  "www.google.com/recaptcha/" on your site.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> -->
